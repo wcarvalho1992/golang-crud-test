@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cenário: Cadastro de produto com o campo Preço vazio" tests="4" skipped="2" failures="0" errors="0" timestamp="2017-04-15T07:32:39" hostname="lawcarvalh-PC" time="0.001">
+  <properties/>
+  <testcase name="Dado que estou na tela de cadastro de novo produto" classname="Cenário: Cadastro de produto com o campo Preço vazio" time="0.0"/>
+  <testcase name="Quando eu submeter o formulário com o campo Preço vazio" classname="Cenário: Cadastro de produto com o campo Preço vazio" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="Então eu devo ver a mensagem &quot;Preço é obrigatório.&quot;" classname="Cenário: Cadastro de produto com o campo Preço vazio" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="classMethod" classname="Cenário: Cadastro de produto com o campo Preço vazio" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

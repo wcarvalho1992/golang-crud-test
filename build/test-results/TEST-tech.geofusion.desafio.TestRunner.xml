@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tech.geofusion.desafio.TestRunner" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="lawcarvalh-PC" time="0.0">
+  <properties/>
+  <system-out><![CDATA[
+7 Scenarios (?[33m7 pending?[0m)
+21 Steps (?[36m7 skipped?[0m, ?[33m7 pending?[0m, ?[32m7 passed?[0m)
+0m0.109s
+
+cucumber.api.PendingException: TODO: implement me
+	at tech.geofusion.desafio.steps.CadastroDeProdutosSteps.eu_submeter_o_formulário_com_dados_válidos(CadastroDeProdutosSteps.java:18)
+	at ?.Quando eu submeter o formulário com dados válidos(tech/geofusion/desafio/cadastro_de_produtos.feature:12)
+
+cucumber.api.PendingException: TODO: implement me
+	at tech.geofusion.desafio.steps.CadastroDeProdutosSteps.eu_submeter_o_formulário_com_o_campo_Nome_do_Produto_vazio(CadastroDeProdutosSteps.java:30)
+	at ?.Quando eu submeter o formulário com o campo Nome do Produto vazio(tech/geofusion/desafio/cadastro_de_produtos.feature:16)
+
+cucumber.api.PendingException: TODO: implement me
+	at tech.geofusion.desafio.steps.CadastroDeProdutosSteps.eu_submeter_o_formulário_com_o_campo_Preço_vazio(CadastroDeProdutosSteps.java:42)
+	at ?.Quando eu submeter o formulário com o campo Preço vazio(tech/geofusion/desafio/cadastro_de_produtos.feature:20)
+
+cucumber.api.PendingException: TODO: implement me
+	at tech.geofusion.desafio.steps.CadastroDeProdutosSteps.eu_submeter_o_formulário_com_o_campo_Data_de_validade_vazio(CadastroDeProdutosSteps.java:48)
+	at ?.Quando eu submeter o formulário com o campo Data de validade vazio(tech/geofusion/desafio/cadastro_de_produtos.feature:24)
+
+cucumber.api.PendingException: TODO: implement me
+	at tech.geofusion.desafio.steps.CadastroDeProdutosSteps.eu_submeter_o_formulário_excedendo_o_limite_de_caracteres_do_campo_Nome_do_Produto(CadastroDeProdutosSteps.java:54)
+	at ?.Quando eu submeter o formulário excedendo o limite de caracteres do campo Nome do Produto(tech/geofusion/desafio/cadastro_de_produtos.feature:28)
+
+cucumber.api.PendingException: TODO: implement me
+	at tech.geofusion.desafio.steps.CadastroDeProdutosSteps.eu_submeter_o_formulário_com_a_data_de_validade_anterior_a_presente_data(CadastroDeProdutosSteps.java:66)
+	at ?.Quando eu submeter o formulário com a data de validade anterior a presente data(tech/geofusion/desafio/cadastro_de_produtos.feature:32)
+
+cucumber.api.PendingException: TODO: implement me
+	at tech.geofusion.desafio.steps.CadastroDeProdutosSteps.eu_submeter_o_formulário_com_o_campo_Preço_preenchido_com_um_valor_diferente_do_formato_de_moeda(CadastroDeProdutosSteps.java:73)
+	at ?.Quando eu submeter o formulário com o campo Preço preenchido com um valor diferente do formato de moeda(tech/geofusion/desafio/cadastro_de_produtos.feature:36)
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

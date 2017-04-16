@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cenário: Cadastro de produto bem sucedido" tests="4" skipped="2" failures="0" errors="0" timestamp="2017-04-15T07:32:39" hostname="lawcarvalh-PC" time="0.012">
+  <properties/>
+  <testcase name="Dado que estou na tela de cadastro de novo produto" classname="Cenário: Cadastro de produto bem sucedido" time="0.001"/>
+  <testcase name="Quando eu submeter o formulário com dados válidos" classname="Cenário: Cadastro de produto bem sucedido" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="Então eu devo visualizar o produto cadastrado na lista de produtos" classname="Cenário: Cadastro de produto bem sucedido" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="classMethod" classname="Cenário: Cadastro de produto bem sucedido" time="0.155"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
