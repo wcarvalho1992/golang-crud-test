@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import tech.geofusion.desafio.pages.sections.LoginSection;
 import tech.geofusion.desafio.pages.sections.MainSection;
+import tech.geofusion.desafio.pages.sections.ProductListSection;
 import tech.geofusion.desafio.pages.sections.ProductRegistrationSection;
 import tech.geofusion.desafio.support.Page;
 import tech.geofusion.desafio.support.domain.Product;
@@ -14,12 +15,14 @@ public class CrudPage extends Page {
     private LoginSection loginSection;
     private MainSection mainSection;
     private ProductRegistrationSection productRegistrationSection;
+    private ProductListSection productListSection;
 
     public CrudPage(WebDriver driver) {
         super(driver);
         this.loginSection = new LoginSection(driver);
         this.mainSection = new MainSection(driver);
         this.productRegistrationSection = new ProductRegistrationSection(driver);
+        this.productListSection = new ProductListSection(driver);
         setUrl(url);
     }
 
@@ -50,7 +53,7 @@ this.mainSection.openProductRegistrationForm();
     }
 
     public String getPriceFieldValue() {
-        return this.productRegistrationSection.getPriceFieldValue();
+        return this.productListSection.getPriceFieldValue();
     }
 
 }

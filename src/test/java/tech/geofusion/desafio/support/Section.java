@@ -47,17 +47,16 @@ public abstract class Section {
     }
 
     protected void fillTextField(WebElement textField, String value) {
-        Actions actions = new Actions(this.driver);
-        actions.moveToElement(textField);
-        actions.click();
+        Actions actions = focusAnElement(textField);
         actions.sendKeys(value);
         actions.build().perform();
     }
 
     protected void fillDateField(WebElement dateField, String value) {
-        Actions actions = new Actions(this.driver);
-        actions.moveToElement(dateField);
-        actions.click();
+        if (value.isEmpty()) {
+            return;
+        }
+        Actions actions = focusAnElement(dateField);
         if (value.equals("before today")) {
             actions.sendKeys(Keys.ARROW_UP);
         }
@@ -71,4 +70,11 @@ public abstract class Section {
         alert.accept();
     }
     
+    private Actions focusAnElement(WebElement dateField) {
+        Actions actions = new Actions(this.driver);
+        actions.moveToElement(dateField);
+        actions.click();
+        return actions;
+    }
+
 }
