@@ -1,7 +1,10 @@
 package tech.geofusion.desafio.support;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class Driver {
 
@@ -23,11 +26,13 @@ public class Driver {
     }
 
     private static void createFirefoxDriver() {
-        if (driver instanceof FirefoxDriver) {
+        if (driver instanceof ChromeDriver) {
             return;
         }
         System.setProperty("webdriver.gecko.driver", "gecko\\geckodriver.exe");
-        driver = new FirefoxDriver();
+        System.setProperty("webdriver.ie.driver", "IEDriver\\IEDriverServer.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver\\chromedriver.exe");
+        driver = new ChromeDriver();
     }
 
 }

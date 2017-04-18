@@ -9,9 +9,9 @@ Funcionalidade: Cadastro de produtos
     Dado que estou na tela de cadastro de novo produto
 
   Cenário: Cadastro de produto bem sucedido
-    Quando eu submeter o formulário com dados válidos
-    Então eu devo visualizar o produto cadastrado na lista de produtos
-
+    Quando eu submeter o formulário preenchido com os dados válidos
+    Então o produto deverá ser cadastrado com sucesso
+    
   Cenário: Cadastro de produto com o campo Nome do Produto vazio
     Quando eu submeter o formulário com o campo Nome do Produto vazio
     Então eu devo ver a mensagem "Nome é obrigatório."

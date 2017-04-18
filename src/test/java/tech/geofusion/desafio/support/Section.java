@@ -1,8 +1,11 @@
 package tech.geofusion.desafio.support;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -19,11 +22,17 @@ public abstract class Section {
     }
 
     protected WebElement getElementById(String elementId) {
-        return driver.findElement(By.id(elementId));
+        return (new WebDriverWait(driver, 10))
+        .until(ExpectedConditions.presenceOfElementLocated(By.id(elementId)));
+    }
+
+    protected WebElement getElementByName(String elementName) {
+        return (new WebDriverWait(driver, 10))
+        .until(ExpectedConditions.presenceOfElementLocated(By.name(elementName)));
     }
 
     protected WebElement getElementByClass(String elementClass) {
-        return driver.findElement(By.className(elementClass));
+        return new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.className(elementClass)));
     }
 
     protected WebElement getElementByLinkText(String linkText) {
@@ -31,8 +40,35 @@ public abstract class Section {
         .until(ExpectedConditions.presenceOfElementLocated(By.linkText(linkText)));
     }
 
-    protected void fillTextField(WebElement textField, String value) {
-        textField.sendKeys(value);
+    protected WebElement getElementByText(String text) {
+        String xpathToLocateElementByText = String.format("//span[text()=%s]", text);
+        return (new WebDriverWait(this.driver, 10))
+        .until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpathToLocateElementByText)));
     }
 
+    protected void fillTextField(WebElement textField, String value) {
+        Actions actions = new Actions(this.driver);
+        actions.moveToElement(textField);
+        actions.click();
+        actions.sendKeys(value);
+        actions.build().perform();
+    }
+
+    protected void fillDateField(WebElement dateField, String value) {
+        Actions actions = new Actions(this.driver);
+        actions.moveToElement(dateField);
+        actions.click();
+        if (value.equals("before today")) {
+            actions.sendKeys(Keys.ARROW_UP);
+        }
+        actions.sendKeys(Keys.ENTER);
+        actions.build().perform();
+    }
+
+    protected void acceptAlert() {
+        Alert alert = new WebDriverWait(this.driver, 10)
+        .until(ExpectedConditions.alertIsPresent());
+        alert.accept();
+    }
+    
 }
