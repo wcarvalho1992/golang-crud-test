@@ -11,8 +11,8 @@ public class Driver {
     private static WebDriver driver;
 
     public static WebDriver getDriver(String browserName) {
-        if (Browsers.FIREFOX.name().equals(browserName.toUpperCase())) {
-            createFirefoxDriver();
+        if (Browsers.CHROME.name().equals(browserName.toUpperCase())) {
+            createChromeDriver();
         }
         return driver;
     }
@@ -25,12 +25,10 @@ public class Driver {
         }
     }
 
-    private static void createFirefoxDriver() {
+    private static void createChromeDriver() {
         if (driver instanceof ChromeDriver) {
             return;
         }
-        System.setProperty("webdriver.gecko.driver", "gecko\\geckodriver.exe");
-        System.setProperty("webdriver.ie.driver", "IEDriver\\IEDriverServer.exe");
         System.setProperty("webdriver.chrome.driver", "chromedriver\\chromedriver.exe");
         driver = new ChromeDriver();
     }
